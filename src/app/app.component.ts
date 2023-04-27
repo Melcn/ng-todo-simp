@@ -7,15 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  public task! : String;
-  public item : [] = [];
+  public newTask : String = '';
+  public taskTodo :  String[] = [];
+  public isChecked: boolean = false;
 
 
   addTask(){
-  //this.item.push(this.task);
+  this.taskTodo.push(this.newTask);
   }
 
-  isChecked(){
-
+  clickCheck(){
+    this.isChecked = !this.isChecked;
   }
+
+  
 }
