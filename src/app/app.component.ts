@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng-todo-simp';
+  
+  public task! : String;
+  public item : [] = [];
+
+
+  addTask(){
+  //this.item.push(this.task);
+  }
+
+  isChecked(){
+
+  }
 }
