@@ -1,3 +1,9 @@
+li{
+    list-style-type: none;
+}
+
 .stylish-element{
     text-decoration: line-through;
 }
+
+

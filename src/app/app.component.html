@@ -2,9 +2,9 @@
 
 <h2>Add item</h2>
 <div>
-  <label for="new-task"></label>
-  <input type="text" [(ngModel)]="newTask" /> 
-  <button type="submit" (click)="addTask()">Add</button>
+  <label for="new-task">
+  <input type="text" [(ngModel)]="newTask" (keydown.enter)="addTask()"/> 
+  <button type="submit" (click)="addTask()">Add</button></label>
 </div>
 
 
@@ -12,28 +12,11 @@
 <div>
 
 <ul>  
-  <li *ngFor="let item of taskTodo; let i = index">
+  <li *ngFor="let task of taskTodo; let i = index">
     <input (click)="taskTodo" type="checkbox" [(ngModel)]="isChecked"> 
-    <span [ngClass]="{'stylish-element': isChecked == true}">{{ taskTodo[i] }}</span>
+    <span [ngClass]="{'stylish-element': isChecked == true}">{{ task }}</span>
   </li>
 </ul>
 </div>
 
 
-<!-- <h2>Completed</h2>
-
-  <div>
-  <ul>  
-    <li *ngFor="let item of taskTodo; let i = index">
-      <input (click)="taskTodo[i].isChecked = !taskTodo[i].isChecked" type="checkbox" [(ngModel)]="taskTodo[i].isChecked"> 
-      <span [ngClass]="{'stylish-element': taskTodo[i].isChecked}">{{ taskTodo[i].name }}</span>
-    </li>
-  </ul>
-</div>
-
-<div>
-
-  <ul>
-    <li *ngFor="let item of taskDone; let i = index"><input (click)="clickCheck" type="checkbox" [(ngModel)]="isChecked"> {{ taskDone }}</li>
-  </ul>
-  </div> -->

@@ -13,7 +13,12 @@ export class AppComponent {
 
 
   addTask(){
-  this.taskTodo.push(this.newTask);
+
+    if(this.newTask.length <=0){
+      return;
+    }
+
+    this.taskTodo.push(this.newTask);
   }
 
   clickCheck(){
